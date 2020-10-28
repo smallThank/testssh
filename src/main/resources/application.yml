@@ -1,0 +1,35 @@
+spring:
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/pages/
+    servlet:
+      load-on-startup: -1
+    static-path-pattern: /**
+  datasource:
+    username: root
+    password: 123
+    url: jdbc:mysql:///testdb?useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+
+
+user:
+  username: smallthanks
+
+
+
+#mybatis整合
+mybatis:
+  type-aliases-package: cn.stscode.stsblog.domain
+  mapper-locations: classpath:mappers/*Mapper.xml
+
+
+#jpa整合
